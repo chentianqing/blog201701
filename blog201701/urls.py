@@ -20,5 +20,7 @@ from app0101 import views as view_index
 urlpatterns = [
     url(r'^$', view_index.index, name='blogindex'),
     url(r'^admin/', admin.site.urls),
+    url(r'^images/(?P<path>.*)$', 'django.views.static.serve', {'document_root': '/opt/project/blog201701/app0101/templates/static/images/'}),
+
 
 ]
